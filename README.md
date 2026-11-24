@@ -1,4 +1,4 @@
-﻿# ðŸŒ³ Ãrvore genealÃ³gica com IA
+# ðŸŒ³ Ãrvore genealÃ³gica com IA
 
 <div align="center">
   <img src="capa/logo.svg" alt="Arckhé AI" height="48" />
@@ -8,7 +8,7 @@
 
 **ðŸ‡§ðŸ‡· [PortuguÃªs](README.md) Â· ðŸ‡ºðŸ‡¸ [English](README.en.md) Â· ðŸ‡ªðŸ‡¸ [EspaÃ±ol](README.es.md)**
 
-[![Sua Ã¡rvore com IA](guia/assets/banner.jpg)](https://inematds.github.io/arvore-genealogica-ia/guia/)
+[![Sua Ã¡rvore com IA](guia/assets/banner.jpg)](https://linnoff88-dev.github.io/
 
 ## O que Ã©
 
@@ -16,9 +16,9 @@ Este Ã© um guia gratuito para montar a Ã¡rvore genealÃ³gica da sua famÃ­
 
 ## ðŸ“– Guia de uso
 
-Guia completo (landing + passo a passo): **https://inematds.github.io/arvore-genealogica-ia/guia/**
+Guia completo (landing + passo a passo): **https://linnoff88-dev.github.io/
 
-ðŸŽ¬ VÃ­deo (o que funciona e onde a IA inventa parentes): **https://inematds.github.io/arvore-genealogica-ia/videos/**
+ðŸŽ¬ VÃ­deo (o que funciona e onde a IA inventa parentes): **https://linnoff88-dev.github.io/
 
 ## A regra
 
@@ -54,7 +54,7 @@ Toda pessoa nova na Ã¡rvore precisa de um registro com **nome + data + local**
 ## Rodar o script
 
 ```bash
-git clone https://github.com/inematds/arvore-genealogica-ia
+git clone https://github.com/linnoff88-dev/arvore-genealogica-ia
 cd arvore-genealogica-ia
 python3 scripts/arvore.py modelos/pessoas.csv --saida exemplo.html        # famÃ­lia fictÃ­cia
 python3 scripts/arvore.py minha-familia.csv --so-confirmados --saida so-provas.html
@@ -73,7 +73,7 @@ As regras mudaram. A ItÃ¡lia limitou a cidadania por descendÃªncia em 2025 (
 
 ---
 
-ConteÃºdo aberto e gratuito Â· [INEMA.CLUB](https://inema.club)
+ConteÃºdo aberto e gratuito Â· [ARCKHÉ AI](https://ARCKHÉ AI)
 
 ---
 
