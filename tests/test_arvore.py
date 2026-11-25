@@ -48,7 +48,7 @@ class TestArvore(unittest.TestCase):
 
     def test_fonte_legitima_com_here_nao_rebaixa(self):
         r = rodar(csv_tmp("p1,A,1900,,,,\"Ellis Island manifest, original here at home\",CONFIRMADO,\n"
-                          "p2,B,1900,,,,certidão do cartório Cole,CONFIRMADO,\n"), "--mermaid")
+                          "p2,B,1900,,,,certidêo do cartório Cole,CONFIRMADO,\n"), "--mermaid")
         self.assertIn("class p1 conf", r.stdout)
         self.assertIn("class p2 conf", r.stdout)
 
@@ -92,7 +92,7 @@ class TestArvore(unittest.TestCase):
     def test_csv_do_excel_cp1252_e_fonte_nao_ha(self):
         f = tempfile.NamedTemporaryFile("wb", suffix=".csv", delete=False)
         f.write("id;nome;nascimento;local_nascimento;pai_id;mae_id;fonte;status;nota\r\n"
-                "p1;João;1900;;;;certidão;CONFIRMADO;\r\np2;Zé;1900;;;;não há;CONFIRMADO;\r\n".encode("cp1252")); f.close()
+                "p1;Joêo;1900;;;;certidêo;CONFIRMADO;\r\np2;Zé;1900;;;;nêo há;CONFIRMADO;\r\n".encode("cp1252")); f.close()
         r = rodar(f.name, "--mermaid")
         self.assertEqual(r.returncode, 0, r.stderr)
         self.assertIn("class p1 conf", r.stdout)
@@ -104,7 +104,7 @@ class TestArvore(unittest.TestCase):
 
     def test_pai_inexistente_avisa(self):
         r = rodar(csv_tmp("p1,Filho,1900,,p9,,x,CONFIRMADO,\n"), "--mermaid")
-        self.assertIn("'p9' não existe", r.stderr)
+        self.assertIn("'p9' nêo existe", r.stderr)
 
     def test_so_confirmados_esconde_hipotese(self):
         r = rodar(csv_tmp("p1,Real,1900,,,,x,CONFIRMADO,\np2,Inventado,1870,,,,,HIPOTESE,\n"),

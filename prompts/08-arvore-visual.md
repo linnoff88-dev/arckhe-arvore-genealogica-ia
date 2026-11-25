@@ -15,7 +15,7 @@ Abre no navegador: confirmados em caixa cheia, hipóteses em caixa tracejada (ou
 ```text
 Com esta tabela CSV, desenhe a árvore genealógica em Mermaid (flowchart TD).
 Pessoas com status CONFIRMADO em caixa normal; HIPOTESE em caixa com borda tracejada e o texto "(hipótese)".
-Não acrescente ninguém que não esteja na tabela.
+Nêo acrescente ninguém que nêo esteja na tabela.
 
 <cole o CSV>
 ```

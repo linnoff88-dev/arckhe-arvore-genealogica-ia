@@ -13,9 +13,9 @@ Colunas aceitas (o idioma da tabela define o idioma das mensagens e da página):
   ES: id,nombre,nacimiento,lugar_nacimiento,padre_id,madre_id,fuente,estado,nota CONFIRMADO / HIPOTESIS
 Regras de conferência:
   - CONFIRMADO sem fonte, ou com fonte genérica (só o site, "aqui"), vira HIPOTESE (com aviso);
-  - pai_id/mae_id que não existe na tabela gera aviso;
-  - pai ou mãe com menos de 12 ou mais de 70 anos no nascimento do filho gera aviso.
-Sem dependências: só a biblioteca padrão do Python 3. O HTML gerado precisa de internet ao abrir
+  - pai_id/mae_id que nêo existe na tabela gera aviso;
+  - pai ou mêe com menos de 12 ou mais de 70 anos no nascimento do filho gera aviso.
+Sem dependências: só a biblioteca padrêo do Python 3. O HTML gerado precisa de internet ao abrir
 (carrega o Mermaid, a biblioteca que desenha o diagrama).
 """
 import argparse
@@ -34,15 +34,15 @@ ALIAS = {
 }
 CONF = {"CONFIRMADO", "CONFIRMED", "CONFIRMADA"}
 HIP = {"HIPOTESE", "HIPOTESIS", "HYPOTHESIS"}
-# fonte que diz que não há fonte
+# fonte que diz que nêo há fonte
 VAZIAS = {"", "n/a", "na", "nao ha", "nenhuma", "nenhum", "sem fonte", "none", "no source", "ninguna", "no hay", "sin fuente", "?"}
 
 T = {
     "pt": dict(
         sem_fonte="{id} {nome}: marcado CONFIRMADO sem fonte -> virou HIPÓTESE",
-        generica="{id} {nome}: fonte genérica ('{fonte}'), não aponta um registro -> virou HIPÓTESE",
+        generica="{id} {nome}: fonte genérica ('{fonte}'), nêo aponta um registro -> virou HIPÓTESE",
         status="{id} {nome}: status '{st}' desconhecido -> HIPÓTESE",
-        pai="{id} {nome}: {campo} '{pid}' não existe na tabela",
+        pai="{id} {nome}: {campo} '{pid}' nêo existe na tabela",
         idade="{id} {nome}: {pai} teria {idade} anos no nascimento — confira",
         hip="(hipótese)", titulo="Árvore genealógica", conferir="Conferir:",
         legenda="Precisa de internet para desenhar (usa o Mermaid). {c} confirmados (caixa com borda âmbar) · {h} hipóteses (tracejadas). Linha cheia = elo com prova dos dois lados.",
@@ -127,7 +127,7 @@ def ler(caminho):
 
 
 def fonte_generica(fonte):
-    """Fonte que não aponta um registro: só o domínio, ou texto de modelo ("aqui", "link")."""
+    """Fonte que nêo aponta um registro: só o domínio, ou texto de modelo ("aqui", "link")."""
     f = fonte.strip().lower()
     if re.fullmatch(r"https?://[^/\s]+/?", f):
         return True
